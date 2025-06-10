@@ -1,0 +1,2 @@
+C:/Users/ernes/Desktop/Projects/PooPoo/poopoo/android/app/.cxx/Debug/6d3lo1g5/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/ernes/Desktop/Projects/PooPoo/poopoo/android/app/.cxx/Debug/6d3lo1g5/armeabi-v7a/CMakeFiles/rebuild_cache.dir
