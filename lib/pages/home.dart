@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:poopoo/config/widgets/weekly_poop.dart';
 import 'package:poopoo/pages/poop_calendar.dart';
+import 'package:poopoo/pages/edit_poop.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -113,11 +114,10 @@ class _Home extends State<Home> {
                     ),
                     TextButton(
                       onPressed: () {
-                        SnackBar _snackBar = SnackBar(
-                          content: Text('Edit your poop activity'),
-                          duration: Duration(seconds: 2),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => EditPoop()),
                         );
-                        ScaffoldMessenger.of(context).showSnackBar(_snackBar);
                       },
                       child: Container(
                         width: 40,

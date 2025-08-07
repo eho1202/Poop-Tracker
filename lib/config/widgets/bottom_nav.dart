@@ -40,8 +40,8 @@ class BottomNav extends StatelessWidget {
           ),
           _buildNavItem(
             index: 2,
-            icon: Icons.settings,
-            label: 'Settings',
+            icon: Icons.person,
+            label: 'Profile',
             isSelected: currentPageIndex == 2,
           ),
         ],

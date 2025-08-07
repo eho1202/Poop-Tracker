@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../config/widgets/add_friend.dart';
 
 class Friends extends StatefulWidget {
   const Friends({super.key});
@@ -48,28 +49,35 @@ class _Friends extends State<Friends> {
                 ),
               ),
               SizedBox(height: 30),
-              Container(
-                height: 60,
-                width: 200,
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Add Friend',
-                        style: TextStyle(fontSize: 24, color: Colors.white),
-                      ),
-                      SizedBox(width: 8),
-                      Icon(Icons.person_add_alt_rounded,
-                          color: Colors.blue, size: 30),
-                    ],
+              ElevatedButton.icon(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return SizedBox(
+                        height: 200,
+                        child: AddFriendBottomSheet(),
+                      );
+                    },
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightBlueAccent,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(200, 60),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
+                  elevation: 3,
+                ),
+                icon: Icon(Icons.person_add_alt_rounded,
+                    color: Colors.blue, size: 30),
+                label: Text(
+                  'Add Friend',
+                  style: TextStyle(fontSize: 24, color: Colors.white),
                 ),
               ),
+              SizedBox(width: 8),
             ],
           ),
         ),

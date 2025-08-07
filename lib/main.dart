@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:poopoo/config/widgets/bottom_nav.dart';
 import 'pages/home.dart';
 import 'pages/friends.dart';
-import 'pages/settings.dart';
+import 'pages/profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> get pages => [
         Home(),
         Friends(),
-        Settings(),
+        Profile(),
       ];
 
   @override
